@@ -1,0 +1,138 @@
+/* Import Font Google Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Palet Warna "Rendang" */
+    --rendang-dark: #3E1414;    /* Coklat Gelap (Daging Rendang Kering) */
+    --rendang-spicy: #922B21;   /* Merah Marun (Bumbu Balado) */
+    --rendang-gold: #F1C40F;    /* Kuning Emas (Minyak/Kunyit) */
+    
+    /* Variabel Standar */
+    --primary-color: #922B21;   /* Kita ganti warna utama jadi merah rendang */
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --dark-bg: var(--rendang-dark);
+    --light-bg: #fdf5e6;        /* Putih Tulang (Nasi Hangat) */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+/* --- SIDEBAR STYLE KHUSUS RENDANG --- */
+/* ... (kode bagian atas biarkan saja) ... */
+
+/* --- SIDEBAR STYLE KHUSUS RENDANG (UPDATED) --- */
+.sidebar {
+    /* Bagian KUNCI agar sidebar diam saat scroll */
+    height: 100vh;        /* Tinggi paksa 100% layar browser */
+    position: sticky;     /* Kunci posisi agar menempel */
+    top: 0;               /* Tempel di bagian paling atas (0px dari atas) */
+    overflow-y: auto;     /* Tambahkan scrollbar di dalam sidebar jika menunya kepanjangan */
+    z-index: 1000;        /* Pastikan sidebar selalu di atas layer konten lain */
+
+    /* Style Pewarnaan Rendang (Tetap Sama) */
+    background: linear-gradient(180deg, var(--rendang-dark) 0%, var(--rendang-spicy) 100%);
+    box-shadow: 4px 0 10px rgba(62, 20, 20, 0.3);
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Kustomisasi Scrollbar Sidebar (Opsional - Agar scrollbar sidebar lebih tipis/cantik) */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--rendang-gold);
+    border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* ... (kode bagian bawah biarkan saja) ... */
+
+.brand-logo {
+    padding: 25px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background: rgba(0,0,0,0.2); /* Sedikit lebih gelap di logo */
+    border-bottom: 1px solid rgba(241, 196, 15, 0.3); /* Garis emas tipis */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.brand-logo i {
+    color: var(--rendang-gold); /* Ikon logo warna emas */
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.75);
+    padding: 12px 20px;
+    border-radius: 0 50px 50px 0; /* Membuat sudut membulat di kanan */
+    margin: 5px 20px 5px 0; /* Memberi jarak di kanan */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--rendang-gold);
+    padding-left: 25px; /* Efek geser saat hover */
+}
+
+/* Menu Aktif (Yang sedang dipilih) */
+.sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-left: 5px solid var(--rendang-gold); /* Aksen garis emas di kiri */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar .nav-link i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Garis Pembatas di Sidebar */
+.sidebar hr {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin: 20px 15px;
+}
+
+/* User Profile Dropdown di Bawah */
+.dropdown-menu-dark {
+    background-color: var(--rendang-dark);
+    border: 1px solid var(--rendang-spicy);
+}
+
+/* Update Tombol Utama biar senada */
+.btn-primary {
+    background-color: var(--rendang-spicy);
+    border-color: var(--rendang-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--rendang-dark);
+    border-color: var(--rendang-dark);
+}
+
+/* Card Styling Update */
+.card-header {
+    border-bottom: 1px solid #eee;
+    background-color: white;
+}
+
+.text-primary {
+    color: var(--rendang-spicy) !important;
+}
